@@ -4,15 +4,15 @@ public class Ejercicio1 {
 
 	public static void main(String[] args) {
 		
-		sayHello(); //Llamo al método de la misma clase.
+		SayHello(); 
 		
-		App otraClase = new App(); //Genero objeto de otra clase.
+		App otraClase = new App(); 
 		
-		otraClase.sayHello2(); //Llamo al método de otra clase.
+		otraClase.SayHello2(); 
 
 	}
 	
-	public static void sayHello() { //Método indicado dentro de la misma clase principal.
+	public static void SayHello() { 
 		System.out.println("Hola Mundo");
 	}
 

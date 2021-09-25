@@ -8,6 +8,12 @@ public class Ejercicio6 {
 
 	public static void main(String[] args) {
 		
+		CincoNumeros();
+
+	}
+	
+	public static void CincoNumeros() {
+		
 		List<Integer> listaNumeros = new ArrayList<Integer>();
 		
 		Scanner teclado = new Scanner(System.in);
@@ -37,6 +43,7 @@ public class Ejercicio6 {
 		System.out.println("Suma de todos los números: " + numSuma);
 				
 		teclado.close();
-
+		
+		
 	}
 }
