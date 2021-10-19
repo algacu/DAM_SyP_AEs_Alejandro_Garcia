@@ -2,17 +2,17 @@ package es.syp.ae2;
 
 import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class Lanzador {
 
-	public static void main(String[] args) throws IOException {
+	public static void main(String[] args) {
 		
-		int numeroProcesadores = Runtime.getRuntime().availableProcessors();
+		int numeroNucleos = Runtime.getRuntime().availableProcessors();
 		
 		String clase = "es.syp.ae2.CalculaNEO";
 		String javaHome = System.getProperty("java.home");
@@ -20,51 +20,73 @@ public class Lanzador {
 		String classpath = System.getProperty("java.class.path");
 		String className = clase;
 		
-		List<String> command = new ArrayList<>();
+		File ficheroLectura = new File("NEOs.txt");
 		
-		File fichero = new File(args[0]);
+		try {
+			
+			int contador = 0;
+			
+			FileReader fr = new FileReader(ficheroLectura);
+			BufferedReader br = new BufferedReader(fr);
+			
+			String linea = br.readLine();
+			
+			String[] datosNEO;
+			
+			
 
-		FileReader fr = new FileReader(fichero);
-		BufferedReader br = new BufferedReader(fr);
-		String linea = br.readLine();
-
-		int contador = 0;
-
-		while (linea != null) {
-
-			List<String> datosNEO = new ArrayList<String>(Arrays.asList(linea.split(",")));
-
-			if (contador <= numeroProcesadores) {
+			while (linea != null) {
+				
+				List<String> command = new ArrayList<>();
+				datosNEO = linea.split(",");
 				command.add(javaBin);
 				command.add("-cp");
 				command.add(classpath);
 				command.add(className);
-				command.add(String.valueOf(datosNEO.get(0)));
-				command.add(String.valueOf(datosNEO.get(1)));
-				command.add(String.valueOf(datosNEO.get(2)));
-
+				command.add(datosNEO[0]);
+				command.add(datosNEO[1]);
+				command.add(datosNEO[2]);
 				ProcessBuilder builder = new ProcessBuilder(command);
+				
+				
+				if (contador <= numeroNucleos) {
 
-				try {
-					builder.inheritIO().start();
-				} catch (IOException e) {
-					e.printStackTrace();
+					try {
+						builder.inheritIO().start();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+
+					contador++;
+					
+				} else {
+					
+					System.out.println("Todos los núcleos están ocupados con procesos. Reiniciando contador de procesos.");
+
+					try {
+						builder.inheritIO().start();
+					} catch (IOException e) {
+						e.printStackTrace();
+					}
+					
+					contador = 0;
+					
 				}
+				
+				linea = br.readLine();
 
-				contador++;
-
-			} else {
-				contador = 0;
 			}
-
-			br.readLine();
-
+			
+			br.close();
+			
+			System.out.println("PROGRAMA FINALIZADO.");
+			
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException ioe) {
+			ioe.printStackTrace();
 		}
-		
-		br.close();
-		
-		System.out.println("PROGRAMA FINALIZADO.");
-		
+
 	}
 
 }

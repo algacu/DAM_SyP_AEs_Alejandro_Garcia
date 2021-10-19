@@ -14,6 +14,11 @@ public class CalculaNEO {
 		double posicionNEO = Double.valueOf(args[1]);
 		double velocidadNEO = Double.valueOf(args[2]);
 		
+//		System.out.println(args[0]);
+//		System.out.println(args[1]);
+//		System.out.println(args[2]);
+
+		
 		double posicionTierra = 1;
 		double velocidadTierra = 100;
 		
@@ -25,15 +30,14 @@ public class CalculaNEO {
 		double resultado = 100 * Math.random() * Math.pow( ((posicionNEO-posicionTierra)/(posicionNEO+posicionTierra)), 2);
 		
 		NumberFormat formateadorDecimal = new DecimalFormat("#0.00");     
-		formateadorDecimal.format(resultado);
 		
-		String resultadoString = Double.toString(resultado);
+		String resultadoString = formateadorDecimal.format(resultado);
 		
 		String nombreFichero = nombre + ".txt";
-		File fichero = new File(nombreFichero);
+		File ficheroEscritura = new File(nombreFichero);
 		
 		try {
-			FileWriter fw = new FileWriter(fichero);
+			FileWriter fw = new FileWriter(ficheroEscritura);
 			fw.write(resultadoString);
 			fw.close();
 		} catch (IOException e) {
@@ -41,7 +45,7 @@ public class CalculaNEO {
 		}
 		
 		if (resultado >= 10.00) {
-			System.err.println("¡¡ALERTA CRÍTICA!! La probabilidad de colisión de " + nombre + " es de " + resultadoString);
+			System.err.println("¡¡ALERTA CRÍTICA!! La probabilidad de colisión de " + nombre + " es de " + resultadoString + "%");
 		} else {
 			System.out.println(nombre + " - Probabilidad de colisión: " + resultadoString + "% - OK");
 		}
