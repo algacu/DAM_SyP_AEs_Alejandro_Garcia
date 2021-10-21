@@ -13,12 +13,6 @@ public class CalculaNEO {
 		String nombre = args[0];
 		double posicionNEO = Double.valueOf(args[1]);
 		double velocidadNEO = Double.valueOf(args[2]);
-		
-//		System.out.println(args[0]);
-//		System.out.println(args[1]);
-//		System.out.println(args[2]);
-
-		
 		double posicionTierra = 1;
 		double velocidadTierra = 100;
 		
@@ -38,7 +32,7 @@ public class CalculaNEO {
 		
 		try {
 			FileWriter fw = new FileWriter(ficheroEscritura);
-			fw.write(resultadoString);
+			fw.write(resultadoString + "%");
 			fw.close();
 		} catch (IOException e) {
 			e.printStackTrace();
