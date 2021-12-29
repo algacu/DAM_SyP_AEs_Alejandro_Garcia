@@ -19,33 +19,29 @@ public class Cliente {
 			System.out.print("Introducir puerto: ");
 			int puerto = Integer.parseInt(teclado.nextLine());
 			
-			System.out.println("CLIENTE >> Arranca cliente -> esperando mensaje del servidor...");
-			
 			Socket cliente = new Socket(host, puerto);
+			System.out.println("\nCLIENTE >> Arranca cliente --> Esperando mensaje del servidor...");
 			
 			ObjectInputStream inObjeto = new ObjectInputStream(cliente.getInputStream());
 			Contrasenya contrasenya = (Contrasenya) inObjeto.readObject();
-			System.out.println("CLIENTE >> Recibo del servidor la contraseña plana (vacía)");
+			System.out.println("\nCLIENTE >> Recibo del servidor la contraseña plana (vacía)");
 			
-			System.out.print("\nCLIENTE >> Introducir nueva contraseña: ");
+			System.out.print("CLIENTE >> Introducir nueva contraseña: ");
 			String nuevaContrasenya = teclado.nextLine();
-			
 			contrasenya.setContrasenyaPlana(nuevaContrasenya);
-			
-			Thread.sleep(2000);
-			
-			System.out.println("\nCLIENTE >> Envío al servidor la nueva contraseña: " + contrasenya.getContrasenyaPlana());
+			System.out.println("CLIENTE >> Envío al servidor la nueva contraseña: " + contrasenya.getContrasenyaPlana());
 			ObjectOutputStream outObjeto = new ObjectOutputStream(cliente.getOutputStream());
 			outObjeto.writeObject(contrasenya);
 			
 			Thread.sleep(2000);
 		
-			System.out.println("CLIENTE >> Recibo consulta sobre encriptación\n");
+			System.out.println("\nCLIENTE >> Recibo consulta sobre encriptación");
 			DataInputStream inData = new DataInputStream(cliente.getInputStream());
 			System.out.print(inData.readUTF());
 			String encriptado = teclado.nextLine();
+			encriptado = encriptado.toLowerCase();
 			
-			System.out.println("\nCLIENTE >> Envío tipo de encriptación");
+			System.out.println("CLIENTE >> Envío tipo de encriptación");
 			DataOutputStream outData = new DataOutputStream(cliente.getOutputStream());
 			outData.writeUTF(encriptado);
 			outData.flush();
@@ -53,7 +49,12 @@ public class Cliente {
 			Thread.sleep(2000);
 
 			Contrasenya contrasenyaCompleta = (Contrasenya) inObjeto.readObject();
-			System.out.println("CLIENTE >> Recibo la contraseña completa (plana y encriptada): " + contrasenyaCompleta.toString());
+			
+			if (!contrasenyaCompleta.getContrasenyaEncriptada().equals("")) {
+				System.out.println("\nCLIENTE >> Recibo contraseña completa --> " + contrasenyaCompleta.toString());
+			} else {
+				System.out.println("\nERROR en la encriptación. El tipo de encriptado solicitado no es válido");
+			}
 			
 			outObjeto.close();
 			inObjeto.close();

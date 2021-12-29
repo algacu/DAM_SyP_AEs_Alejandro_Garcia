@@ -23,7 +23,7 @@ public class HiloServidor {
 
         while (true) {
             Socket conexion = socket.accept();
-            System.err.println("SERVIDOR >> Cliente recibido --> Inicio hilo");
+            System.err.println("\nSERVIDOR >> Cliente recibido --> Inicio hilo");
             Servidor servidor = new Servidor(conexion);
             Thread hilo = new Thread(servidor);
             hilo.start();
