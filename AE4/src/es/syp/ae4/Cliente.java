@@ -1,5 +1,7 @@
 package es.syp.ae4;
 
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
@@ -23,23 +25,35 @@ public class Cliente {
 			
 			ObjectInputStream inObjeto = new ObjectInputStream(cliente.getInputStream());
 			Contrasenya contrasenya = (Contrasenya) inObjeto.readObject();
-			System.out.println("CLIENTE >> Recibo del servidor: " + contrasenya.getContrasenyaPlana());
+			System.out.println("CLIENTE >> Recibo del servidor la contraseña plana (vacía)");
 			
-			System.out.println("CLIENTE >> Actualizar información del objeto...");
-			System.out.print("Introducir nueva contraseña: ");
+			System.out.print("\nCLIENTE >> Introducir nueva contraseña: ");
 			String nuevaContrasenya = teclado.nextLine();
 			
 			contrasenya.setContrasenyaPlana(nuevaContrasenya);
 			
 			Thread.sleep(2000);
 			
-			System.out.println("CLIENTE >> Envio al servidor la nueva contrseña: " + contrasenya.getContrasenyaPlana());
+			System.out.println("\nCLIENTE >> Envío al servidor la nueva contraseña: " + contrasenya.getContrasenyaPlana());
 			ObjectOutputStream outObjeto = new ObjectOutputStream(cliente.getOutputStream());
 			outObjeto.writeObject(contrasenya);
 			
-			//inObjeto = new ObjectInputStream(cliente.getInputStream());
+			Thread.sleep(2000);
+		
+			System.out.println("CLIENTE >> Recibo consulta sobre encriptación\n");
+			DataInputStream inData = new DataInputStream(cliente.getInputStream());
+			System.out.print(inData.readUTF());
+			String encriptado = teclado.nextLine();
+			
+			System.out.println("\nCLIENTE >> Envío tipo de encriptación");
+			DataOutputStream outData = new DataOutputStream(cliente.getOutputStream());
+			outData.writeUTF(encriptado);
+			outData.flush();
+			
+			Thread.sleep(2000);
+
 			Contrasenya contrasenyaCompleta = (Contrasenya) inObjeto.readObject();
-			System.out.println("CLIENTE >> Recibo la contraseña encriptada: " + contrasenyaCompleta.toString());
+			System.out.println("CLIENTE >> Recibo la contraseña completa (plana y encriptada): " + contrasenyaCompleta.toString());
 			
 			outObjeto.close();
 			inObjeto.close();

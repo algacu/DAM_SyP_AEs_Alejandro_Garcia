@@ -35,8 +35,7 @@ public class Contrasenya implements Serializable{
 
 	@Override
 	public String toString() {
-		return "Contrasenya [contrasenyaPlana=" + contrasenyaPlana + ", contrasenyaEncriptada=" + contrasenyaEncriptada
-				+ "]";
+		return "Contraseña plana = " + contrasenyaPlana + " // Contraseña encriptada = " + contrasenyaEncriptada;
 	}
 	
 }
