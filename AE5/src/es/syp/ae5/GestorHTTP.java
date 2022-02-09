@@ -7,6 +7,9 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 
+import javax.mail.MessagingException;
+import javax.mail.internet.AddressException;
+
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
 
@@ -33,6 +36,12 @@ public class GestorHTTP implements HttpHandler {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (AddressException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			} catch (MessagingException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
@@ -83,36 +92,40 @@ public class GestorHTTP implements HttpHandler {
 			if (temperaturaActual <= 0) {
 				sensacion = "¡¡WINTER IS COMING!! ¡¡ENCHUFAD EL TERMOSTATO, INSENSATOS!!";
 				color = "blue";
-			} else if (temperaturaActual > 0 && temperaturaActual <= 10) {
+				ned = "http://images5.fanpop.com/image/photos/30000000/Eddard-Stark-Lord-Snow-1-03-lord-eddard-ned-stark-30085142-1280-720.jpg";
+			} else if (temperaturaActual > 0 && temperaturaActual < 10) {
 				sensacion = "Hace biruji. ¿Y si subimos el termostato?";
 				color = "blue";
-			} else if (temperaturaActual > 10 && temperaturaActual <= 20) {
+				ned = "https://i.pinimg.com/originals/b4/73/62/b47362fea0e74af04a30a750ab6b532e.jpg";
+			} else if (temperaturaActual >= 10 && temperaturaActual < 20) {
 				sensacion = "Not bad. Ni frío ni calor.";
 				color = "green";
-				ned = "https://i.imgflip.com/15rg6x.jpg";
-			} else if (temperaturaActual > 20 && temperaturaActual <= 30) {
+				ned = "https://i.pinimg.com/originals/3f/d5/43/3fd543c7c3d176bd3078ea204bd60a78.png";
+			} else if (temperaturaActual >= 20 && temperaturaActual < 30) {
 				sensacion = "Esto va cogiendo temperatura.";
-				color = "yellow";
-			} else if (temperaturaActual > 30 && temperaturaActual <= 40) {
+				color = "orange";
+				ned = "https://i.imgflip.com/15rg6x.jpg";
+			} else if (temperaturaActual >= 30 && temperaturaActual < 40) {
 				sensacion = "Empieza a hacer calor.";
 				color = "orange";
-			} else if (temperaturaActual > 40) {
+				ned = "http://images4.fanpop.com/image/photos/24500000/Eddard-Stark-house-stark-24506349-500-333.jpg";
+			} else if (temperaturaActual >= 40) {
 				sensacion = "¡Ase kaló! ¡¡Esto parece Dorne!!";
 				color = "red";
+				ned = "http://images5.fanpop.com/image/photos/30000000/Eddard-Stark-Lord-Snow-1-03-lord-eddard-ned-stark-30085142-1280-720.jpg";
 			}
-			
 			
 			htmlResponse = "<html>"
 					+ "<head><title>El tiempo en Invernalia</title></head>"
 					+ "<body style=\"background-image: url('https://www.wallpapertip.com/wmimgs/47-477666_winterfell-aerial-view.png');color:white\">"
 					+ "<div style=\"display: block; background-color: rgba(0, 0, 0, .5);padding:10px\">"
 					+ "<h1 style=\"text-align:center;font-size:60px;\">El tiempo en Invernalia</h1>"
-					+ "<h2 style=\"text-align:center;font-size:30px;\">Temperatura actual: " + temperaturaActual + " ºC</h2>"
-					+ "<h2 style=\"text-align:center;font-size:30px;\">Temperatura termostato: " + temperaturaTermostato + " ºC</h2>"
+					+ "<h2 style=\"text-align:center;font-size:40px;\">Temperatura actual: " + temperaturaActual + " ºC</h2>"
+					+ "<h2 style=\"text-align:center;font-size:40px;\">Temperatura termostato: " + temperaturaTermostato + " ºC</h2>"
 					+ "</div>"
+					+ "<h2 style=\"text-align:center;font-size:30px;background-color:" + color + ";\">" + sensacion + "</h2>"
 					+ "<div style=\"display: inline-block; margin-left:42.5%\">"
-					+ "<h2 style=\"text-align:center;font-size:25px;background-color:" + color + ";\">" + sensacion + "</h2>"
-					+ "<img src=" + ned  + " alt=\"Ned Stark smiling\" width=\"275\" height=\"300\">"
+					+ "<img src=" + ned  + " alt=\"Ned Stark\" width=\"275\" height=\"350\">"
 					+ "</div>"
 					+ "</body>"
 					+ "</html>";
@@ -127,34 +140,49 @@ public class GestorHTTP implements HttpHandler {
 		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
 	}
 	
-	private void handlePostResponse(HttpExchange exchange, String requestParamValue) throws IOException, InterruptedException {
+	private void handlePostResponse(HttpExchange exchange, String requestParamValue) throws IOException, InterruptedException, AddressException, MessagingException {
 		
 		String htmlResponse = "";
 		String nuevaTemperatura = "";
+		String email = "";
+		String emailPass = "";
+		
+		OutputStream outputStream = exchange.getResponseBody();
 		
 		if (requestParamValue.split("=")[0].equals("setTemperatura")) {
 			nuevaTemperatura = requestParamValue.split("=")[1];
             temperaturaTermostato = Integer.parseInt(nuevaTemperatura);
             regularTemperatura();
+            htmlResponse = "Temperatura actualizada a: " + temperaturaActual + "º C";
+    		
+		} else if (requestParamValue.split(":")[0].equals("notificarAveria")) {
+			email = requestParamValue.split("=")[1].split(";")[0];
+			emailPass = requestParamValue.split("=")[2];
+			System.out.println(email + " " + emailPass);
+			Servidor.enviaEmail(email, emailPass);
+			htmlResponse = "Correo enviado correctamente.";
 		}
 		
-		OutputStream outputStream = exchange.getResponseBody();
-		htmlResponse = "Temperatura actualizada a: " + nuevaTemperatura + "º C";
 		exchange.sendResponseHeaders(200, htmlResponse.length());		
 		outputStream.write(htmlResponse.getBytes());
+		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
+		
 		outputStream.flush();
 		outputStream.close();
-		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
+		
 	}
 	
 	private void regularTemperatura() throws InterruptedException {
+		System.out.println("\nAtualizando temperatura...");
 		while (temperaturaActual < temperaturaTermostato) {
+			Thread.sleep(500);
 			temperaturaActual++;
-			Thread.sleep(5000);
+			System.out.println("Temperatura actual: " + temperaturaActual + "º C");
 		}
 		while (temperaturaActual > temperaturaTermostato) {
+			Thread.sleep(500);
 			temperaturaActual--;
-			Thread.sleep(5000);
+			System.out.println("Temperatura actual: " + temperaturaActual + "º C");
 		}
 	}
 
