@@ -18,7 +18,6 @@ public class GestorHTTP implements HttpHandler {
 	int temperaturaActual = 15;
 	int temperaturaTermostato = 15;
 	
-	
 	//Manejador de peticiones
 	@Override
 	public void handle(HttpExchange exchange) throws IOException {
@@ -50,12 +49,21 @@ public class GestorHTTP implements HttpHandler {
 	
 	
 	//Configuramos gestores de peticiones
+	
+	//Nombre: hadleGetRequest
+		//Param. entrada: objeto de tipo HttpExchange.
+		//Param. salida: trozo de la petición URI convertida a string.
+		//Descripción: recibe un objeto de tipo HttpExchange, extrae la petición URI (GET, en este caso) y la trocea para obtener la petición.
 	private String handleGetRequest(HttpExchange exchange) {
 		System.out.println("Recibida URI tipo GET: " + exchange.getRequestURI().toString());
 		System.out.println(exchange.getRequestURI().toString().split("//?")[1]);
 		return exchange.getRequestURI().toString().split("//?")[1];
 	}
 	
+	//Nombre: hadlePostRequest
+			//Param. entrada: objeto de tipo HttpExchange.
+			//Param. salida: trozo de la petición URI convertida a string.
+			//Descripción: recibe un objeto de tipo HttpExchange, extrae la petición de tipo POST, lee su contenido y lo guarda en una variable de tipo stringBuilder.
 	private String handlePostRequest(HttpExchange exchange) {
 		System.out.println("Recibida URI tipo POST: " + exchange.getRequestBody().toString());
 		InputStream input = exchange.getRequestBody();
@@ -63,7 +71,6 @@ public class GestorHTTP implements HttpHandler {
 		BufferedReader bufferedReader = new BufferedReader(reader);
 		StringBuilder stringBuilder = new StringBuilder();
 		String linea;
-		
 		try {
 			while ((linea = bufferedReader.readLine()) != null) {
 				stringBuilder.append(linea);
@@ -72,14 +79,17 @@ public class GestorHTTP implements HttpHandler {
 		} catch (IOException ioe) {
 			ioe.printStackTrace();
 		}
-		
 		return stringBuilder.toString();		
 	}
 	
 	
 	//Configuramos gestores de respuestas
+	
+	//Nombre: hadleGetResponse
+		//Param. entrada: objeto de tipo HttpExchange y string con una petición procesada por handleGestRequest.
+		//Param. salida: no.
+		//Descripción: comprueba la petición recibida (de tipo GET) y devuelve una respuesta html al usuario y otra de tipo OutputStream al servidor.
 	private void handleGetResponse(HttpExchange exchange, String requestParamValue) throws IOException {
-		OutputStream outputStream = exchange.getResponseBody();
 		
 		String htmlResponse = "";
 		
@@ -133,13 +143,20 @@ public class GestorHTTP implements HttpHandler {
 			htmlResponse = "<html><body><h1>Parámetro de consulta erróneo.</h1></body></html>";
 		}
 		
+		OutputStream outputStream = exchange.getResponseBody();
 		exchange.sendResponseHeaders(200, htmlResponse.length());
 		outputStream.write(htmlResponse.getBytes());
 		outputStream.flush();
 		outputStream.close();
+		
 		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
 	}
 	
+	
+	//Nombre: hadlePostResponse
+			//Param. entrada: objeto de tipo HttpExchange y string con una petición procesada por handlePostRequest.
+			//Param. salida: no.
+			//Descripción: comprueba la petición recibida (de tipo POST) y ejecuta las instrucciones pertinentes. Devuelve una respuesta htmly otra de tipo OutputStream a usuario y servidor.	
 	private void handlePostResponse(HttpExchange exchange, String requestParamValue) throws IOException, InterruptedException, AddressException, MessagingException {
 		
 		String htmlResponse = "";
@@ -147,14 +164,11 @@ public class GestorHTTP implements HttpHandler {
 		String email = "";
 		String emailPass = "";
 		
-		OutputStream outputStream = exchange.getResponseBody();
-		
 		if (requestParamValue.split("=")[0].equals("setTemperatura")) {
 			nuevaTemperatura = requestParamValue.split("=")[1];
             temperaturaTermostato = Integer.parseInt(nuevaTemperatura);
             regularTemperatura();
             htmlResponse = "Temperatura actualizada a: " + temperaturaActual + "º C";
-    		
 		} else if (requestParamValue.split(":")[0].equals("notificarAveria")) {
 			email = requestParamValue.split("=")[1].split(";")[0];
 			emailPass = requestParamValue.split("=")[2];
@@ -163,24 +177,29 @@ public class GestorHTTP implements HttpHandler {
 			htmlResponse = "Correo enviado correctamente.";
 		}
 		
+		OutputStream outputStream = exchange.getResponseBody();
 		exchange.sendResponseHeaders(200, htmlResponse.length());		
 		outputStream.write(htmlResponse.getBytes());
-		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
-		
 		outputStream.flush();
 		outputStream.close();
 		
+		System.out.println("Devuelve respuesta HTML: " + htmlResponse);
 	}
 	
+	
+	//Nombre: hadlePostResponse
+		//Param. entrada: no.
+		//Param. salida: no.
+		//Descripción: Actualiza la variable 'temperaturaActual' (atributo de clase), incrementando o decrementando una unidad cada 5 segundos.
 	private void regularTemperatura() throws InterruptedException {
 		System.out.println("\nAtualizando temperatura...");
 		while (temperaturaActual < temperaturaTermostato) {
-			Thread.sleep(500);
+			Thread.sleep(5000);
 			temperaturaActual++;
 			System.out.println("Temperatura actual: " + temperaturaActual + "º C");
 		}
 		while (temperaturaActual > temperaturaTermostato) {
-			Thread.sleep(500);
+			Thread.sleep(5000);
 			temperaturaActual--;
 			System.out.println("Temperatura actual: " + temperaturaActual + "º C");
 		}

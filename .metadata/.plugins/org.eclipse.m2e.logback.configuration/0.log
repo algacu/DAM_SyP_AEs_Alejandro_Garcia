@@ -856,3 +856,96 @@
 2022-02-09 22:18:50,950 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
 2022-02-09 22:18:50,951 [Worker-72: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-02-09 22:18:50,952 [Worker-72: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:50:33,846 [Worker-4: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2022-02-10 17:52:27,370 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:52:27,371 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:52:27,372 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:52:27,373 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:52:31,382 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:52:31,383 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:52:31,384 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:52:31,385 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:53:01,589 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:53:01,590 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:53:01,591 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:53:01,592 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:53:17,209 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:53:17,210 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:53:17,211 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:53:17,212 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:54:27,326 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:54:27,327 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:54:27,328 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:54:27,329 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:55:57,501 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:55:57,502 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:55:57,503 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:55:57,504 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:56:43,992 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:56:43,993 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:56:43,994 [Worker-13: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:56:43,995 [Worker-13: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:56:59,750 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:56:59,751 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:56:59,752 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:56:59,752 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 17:59:26,887 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:59:26,888 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 17:59:26,889 [Worker-14: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 17:59:26,889 [Worker-14: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:04:25,293 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:25,294 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:04:25,295 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:25,296 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:04:42,581 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:42,582 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:04:42,583 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:42,584 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:04:48,058 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:48,059 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:04:48,060 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:04:48,061 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:05:51,049 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:05:51,050 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:05:51,050 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:05:51,051 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:07:17,420 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:07:17,420 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:07:17,421 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:07:17,422 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:10:34,178 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:10:34,179 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:10:34,180 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:10:34,180 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:10:49,894 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:10:49,895 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:10:49,897 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:10:49,897 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:11:22,604 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:11:22,605 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:11:22,606 [Worker-2: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:11:22,607 [Worker-2: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:12:03,611 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:12:03,612 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:12:03,613 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:12:03,613 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:12:29,308 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:12:29,309 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:12:29,310 [Worker-0: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:12:29,310 [Worker-0: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:16:21,459 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:16:21,460 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:16:21,461 [Worker-19: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:16:21,462 [Worker-19: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:16:41,639 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:16:41,640 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:16:41,641 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:16:41,641 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:21:01,200 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:21:01,201 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:21:01,202 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:21:01,203 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 18:24:20,836 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:24:20,837 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 18:24:20,837 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 18:24:20,838 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
