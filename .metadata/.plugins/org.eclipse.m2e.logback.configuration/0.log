@@ -949,3 +949,19 @@
 2022-02-10 18:24:20,837 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
 2022-02-10 18:24:20,837 [Worker-23: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2022-02-10 18:24:20,838 [Worker-23: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 21:13:35,342 [Worker-1: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2022-02-10 21:13:36,843 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:36,845 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 21:13:36,848 [Worker-7: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:36,849 [Worker-7: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 21:13:38,380 [Worker-4: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE5:AE5:0.0.1-SNAPSHOT @ C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\pom.xml.
+2022-02-10 21:13:38,599 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:38,599 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 21:13:38,601 [Worker-4: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:38,602 [Worker-4: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-10 21:13:39,865 [Worker-6: Building] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: AE5:AE5:0.0.1-SNAPSHOT @ C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\pom.xml.
+2022-02-10 21:13:40,019 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:40,020 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\main\resources
+2022-02-10 21:13:40,022 [Worker-6: Building] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2022-02-10 21:13:40,023 [Worker-6: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\agarc\Desktop\2DAM\SyP\Eclipse\AE5\src\test\resources
+2022-02-16 10:51:07,476 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
