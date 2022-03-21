@@ -1,7 +1,7 @@
 # Actividades evaluables de Servicios y Procesos.
 
 Segundo año CFGS Desarrollo de Aplicaciones Multiplataforma.
-Lenguaje de programación: JAVA
+Lenguaje de programación: JAVA (IDE Eclipse - Oracle).
 
 AE1 - Actividad de introducción y repaso de conceptos y fundamentos.
 AE2 - Programación multiproceso.
